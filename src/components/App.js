@@ -3,7 +3,7 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import PopupWithConfirm from "./PopupWithConfirm";
-import PopupWithImage from "./PopupWithImage";
+import ImagePopup from "./ImagePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import EditProfilePopup from "./EditProfilePopup";
 import AddPlacePopup from "./AddPlacePopup";
@@ -62,7 +62,7 @@ function App() {
       closeAllPopups()
     }
   };
-  
+
   return (
     <div className="body">
       <div className="page">
@@ -98,7 +98,7 @@ function App() {
           onClose={closeAllPopups}
           onCloseClick={handlePopupCloseClick}
         />
-        <PopupWithImage
+        <ImagePopup
           isOpen={isImagePopupOpen}
           onClose={closeAllPopups}
           onCloseClick={handlePopupCloseClick}

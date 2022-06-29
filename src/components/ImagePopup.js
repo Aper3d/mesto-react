@@ -1,4 +1,4 @@
-function PopupWithImage(props) {
+function ImagePopup(props) {
     return (
         <div className={`popup popup_view ${props.isOpen ? `popup_open` : ""}`}>
             <div className="popup__overlay" onClick={props.onCloseClick}/>
@@ -12,4 +12,4 @@ function PopupWithImage(props) {
         </div>
     )
 }
-export default PopupWithImage
+export default ImagePopup
