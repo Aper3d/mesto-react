@@ -2,10 +2,18 @@ import React from "react";
 import PopupWithForm from "./PopupWithForm";
 
 function EditAvatarPopup(props) {
+    const ref = React.useRef();
 
     function handleSubmit(e) {
-        e.preventDefault()
+        e.preventDefault();
+        props.onSubmit({
+            userAvatar: ref.current.value
+        });
     };
+
+    React.useEffect(() => {
+        ref.current.value = '';
+    }, [props.isOpen]);
 
     return (
         <PopupWithForm
@@ -16,7 +24,7 @@ function EditAvatarPopup(props) {
             title={'Обновить аватар'}
             buttonText={'Сохранить'}
             onSubmit={handleSubmit}>
-            <input name="userAvatar" type="url" className="popup__input" id="user-avatar"
+            <input ref={ref} name="userAvatar" type="url" className="popup__input" id="user-avatar"
                 placeholder="Ссылка на изображение" required />
             <span className="popup__error user-avatar-error" />
         </PopupWithForm>
