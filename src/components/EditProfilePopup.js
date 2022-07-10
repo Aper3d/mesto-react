@@ -38,10 +38,10 @@ function EditProfilePopup(props) {
             buttonText={'Сохранить'}
             onSubmit={handleSubmit}>
             <input name="userName" type="text" className="popup__input" id="user-name"
-                placeholder="Имя пользователя" minLength="2" maxLength="40" required onChange={handleNameChange} />
+                placeholder="Имя пользователя" minLength="2" maxLength="40" required onChange={handleNameChange} value={name} />
             <span className="popup__error user-name-error" />
             <input name="userDescription" type="text" className="popup__input" id="user-description"
-                placeholder="Описание пользователя" minLength="2" maxLength="200" required onChange={handleDescriptionChange} />
+                placeholder="Описание" minLength="2" maxLength="200" required onChange={handleDescriptionChange} value={description}/>
             <span className="popup__error user-description-error" />
         </PopupWithForm>
     )
