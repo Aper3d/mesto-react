@@ -1,0 +1,10 @@
+.login__input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #cccccc;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  width: 358px;
+  color: #ffffff;
+}

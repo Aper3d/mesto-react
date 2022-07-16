@@ -2,10 +2,14 @@
   width: 88%;
   margin: 45px auto 40px;
   border-bottom: rgba(84, 84, 84, .7) solid 1px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
 }
 @media screen and (max-width: 728px) {
   .header {
     width: 100%;
     margin: 28px auto 42px;
+    padding-bottom: 32px;
   }
 }
